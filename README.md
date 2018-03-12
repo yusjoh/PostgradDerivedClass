@@ -79,3 +79,37 @@ int PostgradStd::calcFee()
 
 }
 
+#include <iostream>
+#include "Student.h"
+#include "PostgradStd.h"
+
+
+using namespace std;
+
+
+int main()
+{
+
+    Student pStudent;
+    pStudent.set_name("Mary Mbeli");
+    pStudent.set_Number("12345678");
+    pStudent.set_Address("Po box 16, Pretoria, 0818");
+    pStudent.set_Degree("Bsc");
+    pStudent.display_info();
+    cout << pStudent.calcFee() << endl;
+
+    PostgradStd sPostgrad;
+    sPostgrad.set_name("Mary Mbeli");
+    sPostgrad.set_Number("12345678");
+    sPostgrad.set_Address("Po Box 16, Pretoria, 0818");
+    sPostgrad.set_Degree("PhD");
+    sPostgrad.set_dissertation("How to get a PhD");
+
+    sPostgrad.display_info();
+    cout << sPostgrad.calcFee() << endl;
+
+    return 0;
+}
+
+
+
